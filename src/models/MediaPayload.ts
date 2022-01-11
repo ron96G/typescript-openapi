@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type MediaPayload = {
-    type: 'image' | 'video' | 'audio' | 'document';
-    url: string;
-    text?: string;
-}
+  type: 'image' | 'video' | 'audio' | 'document';
+  url: string;
+  text?: string;
+};

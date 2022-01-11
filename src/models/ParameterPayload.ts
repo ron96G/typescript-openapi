@@ -3,6 +3,6 @@
 /* eslint-disable */
 
 export type ParameterPayload = {
-    type?: 'parameter';
-    payload?: any;
-}
+  type?: 'parameter';
+  payload?: any;
+};

@@ -3,6 +3,6 @@
 /* eslint-disable */
 
 export type TextPayload = {
-    type: 'text';
-    body: string;
-}
+  type: 'text';
+  body: string;
+};
