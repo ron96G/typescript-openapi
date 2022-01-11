@@ -7,15 +7,8 @@ import type { ParameterPayload } from './ParameterPayload';
 import type { TextPayload } from './TextPayload';
 
 export type MessageRequest = {
-  to: string;
-  type: MessageRequest.type;
-  provider: string;
-  payload: Array<TextPayload | MediaPayload | ParameterPayload>;
-};
-
-export namespace MessageRequest {
-  export enum type {
-    TEXT = 'text',
-    MEDIA = 'media',
-  }
+    to: string;
+    type: 'text' | 'media';
+    provider: string;
+    payload: Array<(TextPayload | MediaPayload | ParameterPayload)>;
 }

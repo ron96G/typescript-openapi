@@ -1,0 +1,238 @@
+{
+  "item": [
+    {
+      "id": "4c512ef5-01f6-45f2-ac5c-95faa9a855ee",
+      "name": "generic",
+      "item": [
+        {
+          "id": "ca1c5212-df53-4822-b039-47e35a4bc5aa",
+          "name": "Foo",
+          "request": {
+            "name": "Foo",
+            "description": {},
+            "url": {
+              "path": ["generic"],
+              "host": ["{{baseUrl}}"],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3f80ca61-c65b-4d68-8d4f-21fa7dcf1eda",
+              "name": "Ok",
+              "originalRequest": {
+                "url": {
+                  "path": ["generic"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n \"status\": {},\n \"id\": \"fugiat cillum consequat\",\n \"errors\": {},\n \"reason\": \"ea eiusmod esse laboris voluptate\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": []
+        },
+        {
+          "id": "a4f165c5-36aa-4ae3-8173-db0763136f18",
+          "name": "Hello",
+          "request": {
+            "name": "Hello",
+            "description": {},
+            "url": {
+              "path": ["generic", ":username"],
+              "host": ["{{baseUrl}}"],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "username",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d5da8f95-78e8-4994-9db6-b2e8a9146480",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": ["generic", ":username"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "username",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n \"status\": {},\n \"id\": \"fugiat cillum consequat\",\n \"errors\": {},\n \"reason\": \"ea eiusmod esse laboris voluptate\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": []
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "ba422978-6c4d-4814-a23d-98a54417bb89",
+      "name": "user",
+      "item": [
+        {
+          "id": "c8e869c0-5bd8-4b54-8564-a4eb22bba984",
+          "name": "Login",
+          "request": {
+            "name": "Login",
+            "description": {},
+            "url": {
+              "path": ["user", "login", ":username"],
+              "host": ["{{baseUrl}}"],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "username",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "800fec6e-9aee-4a8f-8bc1-083e2867e1a0",
+              "name": "Ok",
+              "originalRequest": {
+                "url": {
+                  "path": ["user", "login", ":username"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "username",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n \"status\": {},\n \"id\": \"fugiat cillum consequat\",\n \"errors\": {},\n \"reason\": \"ea eiusmod esse laboris voluptate\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": []
+        },
+        {
+          "id": "102b2b8f-811c-4dca-8514-302f6bfa11fa",
+          "name": "Get User",
+          "request": {
+            "name": "Get User",
+            "description": {},
+            "url": {
+              "path": ["user", ":username"],
+              "host": ["{{baseUrl}}"],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "username",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eab3cde8-baf1-4718-ad6a-e28aefe9bee2",
+              "name": "Ok",
+              "originalRequest": {
+                "url": {
+                  "path": ["user", ":username"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "username",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": "{\n \"status\": {},\n \"id\": \"fugiat cillum consequat\",\n \"errors\": {},\n \"reason\": \"ea eiusmod esse laboris voluptate\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": []
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [{ "type": "string", "value": "/", "key": "baseUrl" }],
+  "info": {
+    "_postman_id": "df4ea8ae-773c-4b2a-ba65-707949d7ae4b",
+    "name": "openapi",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": { "content": "", "type": "text/plain" }
+  }
+}

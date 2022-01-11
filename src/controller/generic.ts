@@ -14,23 +14,21 @@ import { APIResponse } from '../models/APIResponse';
 @Tags('generic')
 export class GenericController extends Controller {
   @Post('{username}')
-  @Response<string>(201)
+  @Response<APIResponse>(201)
   @SuccessResponse('201', 'Created')
-  @Tags('hello')
   public async hello(@Path() username: string): Promise<APIResponse> {
     return {
-      status: APIResponse.status.SUCCESS,
+      status: 'success',
       reason: `Hello, ${username}`,
     };
   }
 
   @Get('')
-  @Response<string>(200)
+  @Response<APIResponse>(200)
   @SuccessResponse('200', 'Ok')
-  @Tags('foo')
   public async foo(): Promise<APIResponse> {
     return {
-      status: APIResponse.status.SUCCESS,
+      status: 'success',
       reason: `Hello World!`,
     };
   }
