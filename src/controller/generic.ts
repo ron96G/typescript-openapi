@@ -13,7 +13,6 @@ import { APIResponse } from '../models/APIResponse';
 @Route('generic')
 @Tags('generic')
 export class GenericController extends Controller {
-
   @Post('{username}')
   @Response<string>(201)
   @SuccessResponse('201', 'Created')
