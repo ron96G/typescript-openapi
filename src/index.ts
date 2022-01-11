@@ -6,7 +6,7 @@ import { RegisterRoutes } from './routes/routes.generated';
 const app = new Koa();
 
 const router: Router = new Router();
-RegisterRoutes(router)
+RegisterRoutes(router);
 
 app.use(router.routes()).use(router.allowedMethods());
 app.use(serve('./public'));
