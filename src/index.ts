@@ -1,6 +1,6 @@
 import Router from '@koa/router';
 import serve from 'koa-static';
-import Koa, { Context } from 'koa';
+import Koa from 'koa';
 import { RegisterRoutes } from './routes/routes.generated';
 
 const app = new Koa();
