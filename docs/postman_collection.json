@@ -36,7 +36,10 @@
               "status": "OK",
               "code": 200,
               "header": [
-                { "key": "Content-Type", "value": "application/json" }
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
               ],
               "body": "{\n \"status\": {},\n \"id\": \"fugiat cillum consequat\",\n \"errors\": {},\n \"reason\": \"ea eiusmod esse laboris voluptate\"\n}",
               "cookie": [],
@@ -93,7 +96,10 @@
               "status": "Created",
               "code": 201,
               "header": [
-                { "key": "Content-Type", "value": "application/json" }
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
               ],
               "body": "{\n \"status\": {},\n \"id\": \"fugiat cillum consequat\",\n \"errors\": {},\n \"reason\": \"ea eiusmod esse laboris voluptate\"\n}",
               "cookie": [],
@@ -157,7 +163,10 @@
               "status": "OK",
               "code": 200,
               "header": [
-                { "key": "Content-Type", "value": "application/json" }
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
               ],
               "body": "{\n \"status\": {},\n \"id\": \"fugiat cillum consequat\",\n \"errors\": {},\n \"reason\": \"ea eiusmod esse laboris voluptate\"\n}",
               "cookie": [],
@@ -214,7 +223,10 @@
               "status": "OK",
               "code": 200,
               "header": [
-                { "key": "Content-Type", "value": "application/json" }
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
               ],
               "body": "{\n \"status\": {},\n \"id\": \"fugiat cillum consequat\",\n \"errors\": {},\n \"reason\": \"ea eiusmod esse laboris voluptate\"\n}",
               "cookie": [],

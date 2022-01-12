@@ -17,7 +17,7 @@ export class MessagingController extends Controller {
   @Response<APIResponse>(202)
   @SuccessResponse('202', 'Accepted')
   public async sendMessage(
-    @Body() requestBody: MessageRequest,
+    @Body() requestBody: MessageRequest
   ): Promise<APIResponse> {
     console.log(`Received message: ${requestBody}`);
     return {

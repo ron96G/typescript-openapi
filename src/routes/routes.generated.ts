@@ -155,7 +155,7 @@ export function RegisterRoutes(router: KoaRouter) {
 
       const promise = controller.hello.apply(controller, validatedArgs as any);
       return promiseHandler(controller, promise, context, undefined, next);
-    },
+    }
   );
   // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
   router.get(
@@ -176,7 +176,7 @@ export function RegisterRoutes(router: KoaRouter) {
 
       const promise = controller.foo.apply(controller, validatedArgs as any);
       return promiseHandler(controller, promise, context, undefined, next);
-    },
+    }
   );
   // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
   router.post(
@@ -204,10 +204,10 @@ export function RegisterRoutes(router: KoaRouter) {
 
       const promise = controller.sendMessage.apply(
         controller,
-        validatedArgs as any,
+        validatedArgs as any
       );
       return promiseHandler(controller, promise, context, undefined, next);
-    },
+    }
   );
   // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
   router.post(
@@ -235,7 +235,7 @@ export function RegisterRoutes(router: KoaRouter) {
 
       const promise = controller.login.apply(controller, validatedArgs as any);
       return promiseHandler(controller, promise, context, undefined, next);
-    },
+    }
   );
   // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
   router.get(
@@ -263,10 +263,10 @@ export function RegisterRoutes(router: KoaRouter) {
 
       const promise = controller.getUser.apply(
         controller,
-        validatedArgs as any,
+        validatedArgs as any
       );
       return promiseHandler(controller, promise, context, undefined, next);
-    },
+    }
   );
   // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
 
@@ -285,7 +285,7 @@ export function RegisterRoutes(router: KoaRouter) {
     promise: Promise<any>,
     context: any,
     successStatus: any,
-    next: () => Promise<any>,
+    next: () => Promise<any>
   ) {
     return Promise.resolve(promise)
       .then((data: any) => {
@@ -313,7 +313,7 @@ export function RegisterRoutes(router: KoaRouter) {
     next: () => any,
     statusCode?: number,
     data?: any,
-    headers: any = {},
+    headers: any = {}
   ) {
     if (!context.headerSent && !context.response.__tsoaResponded) {
       context.set(headers);
@@ -350,7 +350,7 @@ export function RegisterRoutes(router: KoaRouter) {
             name,
             errorFields,
             undefined,
-            { noImplicitAdditionalProperties: 'throw-on-extras' },
+            { noImplicitAdditionalProperties: 'throw-on-extras' }
           );
         case 'path':
           return validationService.ValidateParam(
@@ -359,7 +359,7 @@ export function RegisterRoutes(router: KoaRouter) {
             name,
             errorFields,
             undefined,
-            { noImplicitAdditionalProperties: 'throw-on-extras' },
+            { noImplicitAdditionalProperties: 'throw-on-extras' }
           );
         case 'header':
           return validationService.ValidateParam(
@@ -368,7 +368,7 @@ export function RegisterRoutes(router: KoaRouter) {
             name,
             errorFields,
             undefined,
-            { noImplicitAdditionalProperties: 'throw-on-extras' },
+            { noImplicitAdditionalProperties: 'throw-on-extras' }
           );
         case 'body':
           return validationService.ValidateParam(
@@ -377,7 +377,7 @@ export function RegisterRoutes(router: KoaRouter) {
             name,
             errorFields,
             undefined,
-            { noImplicitAdditionalProperties: 'throw-on-extras' },
+            { noImplicitAdditionalProperties: 'throw-on-extras' }
           );
         case 'body-prop':
           return validationService.ValidateParam(
@@ -386,7 +386,7 @@ export function RegisterRoutes(router: KoaRouter) {
             name,
             errorFields,
             'body.',
-            { noImplicitAdditionalProperties: 'throw-on-extras' },
+            { noImplicitAdditionalProperties: 'throw-on-extras' }
           );
         case 'formData':
           if (args[key].dataType === 'file') {
@@ -396,7 +396,9 @@ export function RegisterRoutes(router: KoaRouter) {
               name,
               errorFields,
               undefined,
-              { noImplicitAdditionalProperties: 'throw-on-extras' },
+              {
+                noImplicitAdditionalProperties: 'throw-on-extras',
+              }
             );
           } else if (
             args[key].dataType === 'array' &&
@@ -408,7 +410,9 @@ export function RegisterRoutes(router: KoaRouter) {
               name,
               errorFields,
               undefined,
-              { noImplicitAdditionalProperties: 'throw-on-extras' },
+              {
+                noImplicitAdditionalProperties: 'throw-on-extras',
+              }
             );
           } else {
             return validationService.ValidateParam(
@@ -417,7 +421,9 @@ export function RegisterRoutes(router: KoaRouter) {
               name,
               errorFields,
               undefined,
-              { noImplicitAdditionalProperties: 'throw-on-extras' },
+              {
+                noImplicitAdditionalProperties: 'throw-on-extras',
+              }
             );
           }
         case 'res':
@@ -434,7 +440,7 @@ export function RegisterRoutes(router: KoaRouter) {
 
   function responder(
     context: any,
-    next: () => any,
+    next: () => any
   ): TsoaResponse<HttpStatusCodeLiteral, unknown> {
     return function (status, data, headers) {
       returnHandler(context, next, status, data, headers);
