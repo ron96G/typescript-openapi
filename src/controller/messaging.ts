@@ -20,9 +20,10 @@ export class MessagingController extends Controller {
     @Body() requestBody: MessageRequest
   ): Promise<APIResponse> {
     console.log(`Received message: ${requestBody}`);
+    this.setStatus(202);
     return {
       status: 'success',
-      reason: `Received message for ${requestBody.to}`,
+      reason: `Received message for ${requestBody.recipient}`,
     };
   }
 }

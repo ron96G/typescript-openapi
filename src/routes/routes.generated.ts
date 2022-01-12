@@ -42,6 +42,33 @@ const models: TsoaRoute.Models = {
     },
   },
   // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+  ChannelSelection: {
+    dataType: 'refAlias',
+    type: {
+      dataType: 'nestedObjectLiteral',
+      nestedProperties: {
+        provider: {
+          dataType: 'union',
+          subSchemas: [
+            { dataType: 'enum', enums: ['whatsapp'] },
+            { dataType: 'enum', enums: ['abc'] },
+            { dataType: 'enum', enums: ['rbc'] },
+          ],
+        },
+      },
+      validators: {},
+    },
+  },
+  // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+  WhatsAppRecipient: {
+    dataType: 'refAlias',
+    type: {
+      dataType: 'nestedObjectLiteral',
+      nestedProperties: { contact_id: { dataType: 'string', required: true } },
+      validators: {},
+    },
+  },
+  // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
   TextPayload: {
     dataType: 'refAlias',
     type: {
@@ -105,16 +132,8 @@ const models: TsoaRoute.Models = {
           },
           required: true,
         },
-        provider: { dataType: 'string', required: true },
-        type: {
-          dataType: 'union',
-          subSchemas: [
-            { dataType: 'enum', enums: ['text'] },
-            { dataType: 'enum', enums: ['media'] },
-          ],
-          required: true,
-        },
-        to: { dataType: 'string', required: true },
+        recipient: { ref: 'WhatsAppRecipient' },
+        channel: { ref: 'ChannelSelection', required: true },
       },
       validators: {},
     },
@@ -396,9 +415,7 @@ export function RegisterRoutes(router: KoaRouter) {
               name,
               errorFields,
               undefined,
-              {
-                noImplicitAdditionalProperties: 'throw-on-extras',
-              }
+              { noImplicitAdditionalProperties: 'throw-on-extras' }
             );
           } else if (
             args[key].dataType === 'array' &&
@@ -410,9 +427,7 @@ export function RegisterRoutes(router: KoaRouter) {
               name,
               errorFields,
               undefined,
-              {
-                noImplicitAdditionalProperties: 'throw-on-extras',
-              }
+              { noImplicitAdditionalProperties: 'throw-on-extras' }
             );
           } else {
             return validationService.ValidateParam(
@@ -421,9 +436,7 @@ export function RegisterRoutes(router: KoaRouter) {
               name,
               errorFields,
               undefined,
-              {
-                noImplicitAdditionalProperties: 'throw-on-extras',
-              }
+              { noImplicitAdditionalProperties: 'throw-on-extras' }
             );
           }
         case 'res':

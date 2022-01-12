@@ -23,6 +23,24 @@
         "required": ["status"],
         "type": "object"
       },
+      "ChannelSelection": {
+        "properties": {
+          "provider": {
+            "type": "string",
+            "enum": ["whatsapp", "abc", "rbc"]
+          }
+        },
+        "type": "object"
+      },
+      "WhatsAppRecipient": {
+        "properties": {
+          "contact_id": {
+            "type": "string"
+          }
+        },
+        "required": ["contact_id"],
+        "type": "object"
+      },
       "TextPayload": {
         "properties": {
           "body": {
@@ -82,18 +100,14 @@
             },
             "type": "array"
           },
-          "provider": {
-            "type": "string"
+          "recipient": {
+            "$ref": "#/components/schemas/WhatsAppRecipient"
           },
-          "type": {
-            "type": "string",
-            "enum": ["text", "media"]
-          },
-          "to": {
-            "type": "string"
+          "channel": {
+            "$ref": "#/components/schemas/ChannelSelection"
           }
         },
-        "required": ["payload", "provider", "type", "to"],
+        "required": ["payload", "channel"],
         "type": "object"
       }
     },

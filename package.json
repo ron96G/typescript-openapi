@@ -11,8 +11,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext ts",
     "format": "prettier --write .",
-    "generate": "openapi --input ./docs/openapi.yaml --output ./generated --exportServices=false --useUnionTypes",
-    "postman": "tsoa spec && openapi2postmanv2  -s public/swagger.json -o docs/postman_collection.json"
+    "generate": "openapi --input ./docs/openapi.json --output ./generated --exportServices=false --useUnionTypes",
+    "postman": "tsoa spec && openapi2postmanv2  -s public/swagger.json -o docs/postman_collection.json",
+    "docker:build": "yarn build && docker build -t openapi -f .docker/Dockerfile ."
   },
   "keywords": [],
   "author": "",

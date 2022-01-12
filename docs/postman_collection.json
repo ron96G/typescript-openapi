@@ -1,11 +1,11 @@
 {
   "item": [
     {
-      "id": "4c512ef5-01f6-45f2-ac5c-95faa9a855ee",
+      "id": "b1ecbb63-83e6-432d-a791-b7ced49d44c1",
       "name": "generic",
       "item": [
         {
-          "id": "ca1c5212-df53-4822-b039-47e35a4bc5aa",
+          "id": "1555e7c5-aeca-4f15-8c64-5096fe0b3f20",
           "name": "Foo",
           "request": {
             "name": "Foo",
@@ -21,7 +21,7 @@
           },
           "response": [
             {
-              "id": "3f80ca61-c65b-4d68-8d4f-21fa7dcf1eda",
+              "id": "b33d9088-ff54-4712-becf-dc6a38f2e380",
               "name": "Ok",
               "originalRequest": {
                 "url": {
@@ -36,12 +36,9 @@
               "status": "OK",
               "code": 200,
               "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
+                { "key": "Content-Type", "value": "application/json" }
               ],
-              "body": "{\n \"status\": {},\n \"id\": \"fugiat cillum consequat\",\n \"errors\": {},\n \"reason\": \"ea eiusmod esse laboris voluptate\"\n}",
+              "body": "{\n \"status\": \"success\",\n \"id\": \"nisi\",\n \"errors\": {},\n \"reason\": \"nulla magna\"\n}",
               "cookie": [],
               "_postman_previewlanguage": "json"
             }
@@ -49,7 +46,7 @@
           "event": []
         },
         {
-          "id": "a4f165c5-36aa-4ae3-8173-db0763136f18",
+          "id": "d8322e85-92c6-4977-887a-1d2ab577fe9e",
           "name": "Hello",
           "request": {
             "name": "Hello",
@@ -73,7 +70,7 @@
           },
           "response": [
             {
-              "id": "d5da8f95-78e8-4994-9db6-b2e8a9146480",
+              "id": "af061844-4fd4-416a-ab71-7660fbfffe42",
               "name": "Created",
               "originalRequest": {
                 "url": {
@@ -96,12 +93,9 @@
               "status": "Created",
               "code": 201,
               "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
+                { "key": "Content-Type", "value": "application/json" }
               ],
-              "body": "{\n \"status\": {},\n \"id\": \"fugiat cillum consequat\",\n \"errors\": {},\n \"reason\": \"ea eiusmod esse laboris voluptate\"\n}",
+              "body": "{\n \"status\": \"success\",\n \"id\": \"nisi\",\n \"errors\": {},\n \"reason\": \"nulla magna\"\n}",
               "cookie": [],
               "_postman_previewlanguage": "json"
             }
@@ -112,11 +106,60 @@
       "event": []
     },
     {
-      "id": "ba422978-6c4d-4814-a23d-98a54417bb89",
+      "id": "9e5a77b4-9c79-4541-a000-f518d7897a1d",
+      "name": "Send Message",
+      "request": {
+        "name": "Send Message",
+        "description": {},
+        "url": {
+          "path": ["messaging", "sendMessage"],
+          "host": ["{{baseUrl}}"],
+          "query": [],
+          "variable": []
+        },
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"payload\": [\n        {\n            \"body\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"body\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"channel\": {\n        \"provider\": \"<string>\"\n    },\n    \"recipient\": {\n        \"contact_id\": \"<string>\"\n    }\n}",
+          "options": { "raw": { "language": "json" } }
+        }
+      },
+      "response": [
+        {
+          "id": "0501ef18-6218-4d13-b619-3e7c9c803159",
+          "name": "Accepted",
+          "originalRequest": {
+            "url": {
+              "path": ["messaging", "sendMessage"],
+              "host": ["{{baseUrl}}"],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"payload\": [\n        {\n            \"body\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"body\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"channel\": {\n        \"provider\": \"<string>\"\n    },\n    \"recipient\": {\n        \"contact_id\": \"<string>\"\n    }\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "header": [{ "key": "Content-Type", "value": "application/json" }],
+          "body": "{\n \"status\": \"success\",\n \"id\": \"nisi\",\n \"errors\": {},\n \"reason\": \"nulla magna\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "4083afdd-4f6b-443e-a5f6-0304fa08185c",
       "name": "user",
       "item": [
         {
-          "id": "c8e869c0-5bd8-4b54-8564-a4eb22bba984",
+          "id": "f8002826-7d96-4098-b799-400f1df4b183",
           "name": "Login",
           "request": {
             "name": "Login",
@@ -140,7 +183,7 @@
           },
           "response": [
             {
-              "id": "800fec6e-9aee-4a8f-8bc1-083e2867e1a0",
+              "id": "a263abe3-3b65-4250-985e-b6aa539a45bf",
               "name": "Ok",
               "originalRequest": {
                 "url": {
@@ -163,12 +206,9 @@
               "status": "OK",
               "code": 200,
               "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
+                { "key": "Content-Type", "value": "application/json" }
               ],
-              "body": "{\n \"status\": {},\n \"id\": \"fugiat cillum consequat\",\n \"errors\": {},\n \"reason\": \"ea eiusmod esse laboris voluptate\"\n}",
+              "body": "{\n \"status\": \"success\",\n \"id\": \"nisi\",\n \"errors\": {},\n \"reason\": \"nulla magna\"\n}",
               "cookie": [],
               "_postman_previewlanguage": "json"
             }
@@ -176,7 +216,7 @@
           "event": []
         },
         {
-          "id": "102b2b8f-811c-4dca-8514-302f6bfa11fa",
+          "id": "0cbc826f-79e9-474d-bf20-993c7fe9a3c0",
           "name": "Get User",
           "request": {
             "name": "Get User",
@@ -200,7 +240,7 @@
           },
           "response": [
             {
-              "id": "eab3cde8-baf1-4718-ad6a-e28aefe9bee2",
+              "id": "5f8f8f8e-89f4-4094-b970-cc14fffd8ae1",
               "name": "Ok",
               "originalRequest": {
                 "url": {
@@ -223,12 +263,9 @@
               "status": "OK",
               "code": 200,
               "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
+                { "key": "Content-Type", "value": "application/json" }
               ],
-              "body": "{\n \"status\": {},\n \"id\": \"fugiat cillum consequat\",\n \"errors\": {},\n \"reason\": \"ea eiusmod esse laboris voluptate\"\n}",
+              "body": "{\n \"status\": \"success\",\n \"id\": \"nisi\",\n \"errors\": {},\n \"reason\": \"nulla magna\"\n}",
               "cookie": [],
               "_postman_previewlanguage": "json"
             }
@@ -242,7 +279,7 @@
   "event": [],
   "variable": [{ "type": "string", "value": "/", "key": "baseUrl" }],
   "info": {
-    "_postman_id": "df4ea8ae-773c-4b2a-ba65-707949d7ae4b",
+    "_postman_id": "e6eb5123-1dba-47a8-a9bb-3c30297c625d",
     "name": "openapi",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": { "content": "", "type": "text/plain" }

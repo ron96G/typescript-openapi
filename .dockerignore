@@ -1,0 +1,8 @@
+node_modules/
+generated/
+
+##############################
+## Visual Studio Code
+##############################
+.vscode/
+
